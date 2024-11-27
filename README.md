@@ -25,7 +25,7 @@ The main goal? Use as much **AWS** as possible while leveling up my skills! 💪
 
 ### Deployment
 - **Staging and Production Environments**: Separate environments for safe feature testing and reliable deployments 🎯
-- **GitHub Actions**: Automating the CI/CD pipelines for both environments 🚀
+- **GitHub Actions + AWS CodePipeline**: Automating the CI/CD pipelines for both environments 🚀
 
 ### Frontend
 - **Next.js**: The frontend powerhouse ⚡
