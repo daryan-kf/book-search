@@ -1,11 +1,13 @@
 import axios from "axios";
 import fs from "fs/promises";
 
-import "../config/env"; // Automatically loads and validates environment variables
+import "../config/env";
+
+import {Book} from "@/types";
 
 const GOOGLE_BOOKS_API_URL = "https://www.googleapis.com/books/v1/volumes";
 
-const fetchBooks = async () => {
+export const fetchBooks = async () => {
   const apiKey = process.env.GOOGLE_API_KEY;
 
   if (!apiKey) {
@@ -15,7 +17,7 @@ const fetchBooks = async () => {
   }
 
   const categories = ["Fiction", "Science", "History", "Fantasy", "Romance"];
-  const books: any[] = [];
+  const books: Book[] = [];
 
   for (const category of categories) {
     const response = await axios.get(GOOGLE_BOOKS_API_URL, {
