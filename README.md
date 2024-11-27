@@ -20,7 +20,7 @@ The main goal? Use as much **AWS** as possible while leveling up my skills! 💪
 - **Node.js** & **Express.js**: My trusty companions for API development 🛠️
 - **GraphQL**: For efficient querying and API design 🚀
 - **ElasticSearch**: For powerful search and autosuggestions 🔍✨
-- **MongoDB**: Storing books with **AWS DocumentDB** 📂
+- **MongoDB**: Storing books with **AWS DynamoDB** 📂
 - **AWS Services**: Let’s see how much of AWS I can squeeze in here 🌍
 
 ### Deployment
