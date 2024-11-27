@@ -1,13 +1,17 @@
 import axios from "axios";
 import {jest} from "@jest/globals";
 import {fetchBooks} from "../services/fetchBooks";
+// Use the globally defined Book type
+import {Book} from "@/types";
 
 jest.mock("axios");
+
+const mockedAxios = axios as jest.Mocked<typeof axios>;
 
 describe("fetchBooks", () => {
   it("should return books from Google Books API", async () => {
     // Mock Axios response
-    (axios.get as jest.Mock).mockResolvedValue({
+    mockedAxios.mockResolvedValue({
       data: {
         items: [
           {
@@ -31,10 +35,10 @@ describe("fetchBooks", () => {
       },
     });
 
-    const books: any[] = await fetchBooks();
+    const books: Book[] = await fetchBooks();
 
     expect(books.length).toEqual(1);
-    expect(books[0]).toEqual<any>({
+    expect(books[0]).toEqual<Book>({
       id: "11FVPgAACAAJ",
       title: "The Rachel Papers",
       authors: ["Martin Amis"],
