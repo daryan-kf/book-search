@@ -1,7 +1,7 @@
 import axios from "axios";
-import * as dotenv from "dotenv";
+import fs from "fs/promises";
 
-dotenv.config();
+import "../config/env"; // Automatically loads and validates environment variables
 
 const GOOGLE_BOOKS_API_URL = "https://www.googleapis.com/books/v1/volumes";
 
@@ -51,8 +51,12 @@ const fetchBooks = async () => {
 
 (async () => {
   try {
-    const books = await fetchBooks();
-    console.log(JSON.stringify(books, null, 2));
+    const books = await fetchBooks(); // Replace fetchBooks with your actual function to fetch books.
+
+    // Write books to a JSON file
+    await fs.writeFile("src/data/books.json", JSON.stringify(books, null, 2));
+
+    console.log("Books successfully saved to books.json");
   } catch (error) {
     console.error("Error fetching books:", error);
   }
