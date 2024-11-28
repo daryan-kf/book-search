@@ -1,7 +1,7 @@
-import {DynamoDBClient} from "@aws-sdk/client-dynamodb";
-import {DynamoDBDocumentClient} from "@aws-sdk/lib-dynamodb";
+import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
+import { DynamoDBDocumentClient } from '@aws-sdk/lib-dynamodb';
 
-import "@/config/env";
+import '@/config/env';
 
 // Create DynamoDB client
 const ddbClient = new DynamoDBClient({
