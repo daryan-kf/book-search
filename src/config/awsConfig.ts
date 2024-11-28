@@ -1,13 +1,16 @@
-import AWS from "aws-sdk";
+import {DynamoDBClient} from "@aws-sdk/client-dynamodb";
+import {DynamoDBDocumentClient} from "@aws-sdk/lib-dynamodb";
 
-import "../config/env";
+import "@/config/env";
 
-// Stablish connections with AWS using IAM credentials
-AWS.config.update({
+// Create DynamoDB client
+const ddbClient = new DynamoDBClient({
   region: process.env.AWS_REGION,
-  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+  credentials: {
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID!,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY!,
+  },
 });
 
-// targeting all DynamoDB Tables from AWS
-export const dynamoDB = new AWS.DynamoDB.DocumentClient();
+// Create DynamoDB DocumentClient for simplified interactions
+export const dynamoDB = DynamoDBDocumentClient.from(ddbClient);

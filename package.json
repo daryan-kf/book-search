@@ -18,6 +18,9 @@
     "typescript": "^5.7.2"
   },
   "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.699.0",
+    "@aws-sdk/credential-provider-env": "^3.696.0",
+    "@aws-sdk/lib-dynamodb": "^3.699.0",
     "@types/aws-sdk": "^0.0.42",
     "aws-sdk": "^2.1692.0",
     "axios": "^1.7.8",
