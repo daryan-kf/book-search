@@ -1,7 +1,7 @@
 import axios from 'axios';
 import fs from 'fs/promises';
 
-import '../config/env';
+import '@/config/env';
 
 import { Book } from '@/types';
 
