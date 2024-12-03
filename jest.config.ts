@@ -7,4 +7,5 @@ export default {
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
     prefix: '<rootDir>/',
   }),
+  moduleDirectories: ['node_modules', '<rootDir>/src'], // Ensures alias works properly
 };
