@@ -4,6 +4,9 @@ import { compilerOptions } from './tsconfig.json';
 export default {
   preset: 'ts-jest',
   testEnvironment: 'node',
+  testMatch: ['**/tests/**/*.test.ts'], // Matches test files in the `tests` folder
+  moduleFileExtensions: ['ts', 'js'],
+  rootDir: './',
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
     prefix: '<rootDir>/',
   }),
