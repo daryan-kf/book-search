@@ -5,7 +5,7 @@ import fs from 'fs/promises';
 import { isValid, parseISO } from 'date-fns';
 import { Book } from '../types';
 
-import '../config/env';
+import 'dotenv/config';
 
 const GOOGLE_BOOKS_API_URL = 'https://www.googleapis.com/books/v1/volumes';
 
