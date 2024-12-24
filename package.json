@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node dist/server.js",
+    "start:vercel": "vercel dev",
     "build": "tsc",
     "dev": "nodemon src/server.ts",
     "test": "jest",

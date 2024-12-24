@@ -9,6 +9,6 @@ const app = express();
 
 app.use(express.json());
 
-app.use('/books', bookRoutes);
+app.use('/', bookRoutes);
 
 export default app;

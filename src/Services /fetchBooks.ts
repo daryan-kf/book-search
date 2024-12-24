@@ -22,7 +22,7 @@ const parsePublishedDate = (date: string | undefined): string | boolean => {
 };
 
 export const fetchBooks = async () => {
-  const apiKey = 'AIzaSyDOYJj7Y3-CPtjwmsQg2GYqlkpvmRujy8Y';
+  const apiKey = process.env.GOOGLE_API_KEY;
 
   if (!apiKey) {
     throw new Error(
