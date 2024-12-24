@@ -1,20 +1,21 @@
 import fs from 'fs';
+import path from 'path';
 import { PutCommand } from '@aws-sdk/lib-dynamodb';
 
-import { dynamoDB } from '@/config/awsConfig';
 import { Book } from '@/types/index';
 
+import { dynamoDB } from '../config/awsConfig';
+
 const booksData: Book[] = JSON.parse(
-  fs.readFileSync('src/data/books.json', 'utf8')
+  fs.readFileSync(path.join(__dirname, '../data/books.json'), 'utf8')
 );
 
 const insertBooks = async () => {
-  // table name in DynamoDB
   const tableName = 'books';
 
   try {
     for (const book of booksData) {
-      const params: { TableName: string; Item: Book } = {
+      const params = {
         TableName: tableName,
         Item: {
           id: book.id,
