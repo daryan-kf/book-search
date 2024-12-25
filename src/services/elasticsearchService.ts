@@ -1,12 +1,8 @@
-import { Client } from '@elastic/elasticsearch';
-
-const esClient = new Client({
-  node: process.env.ELASTICSEARCH_URL,
-});
+import { elasticsearchClient } from '@/config/elasticsearchConfig';
 
 export const searchBooks = async (query: string): Promise<any[]> => {
   try {
-    const response = await esClient.search({
+    const response = await elasticsearchClient.search({
       index: 'books', // Your Elasticsearch index name
       body: {
         query: {
