@@ -3,6 +3,6 @@ import { getBooks } from '../controllers/bookController';
 
 const router = express.Router();
 
-router.get('/', getBooks); // Fetch all books
+router.get('/', getBooks);
 
 export default router;
