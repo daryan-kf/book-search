@@ -1,5 +1,5 @@
 import express from 'express';
-import { searchBooksController } from '../controllers/bookSearchController';
+import { searchBooksController } from '@/controllers/bookSearchController';
 
 const router = express.Router();
 

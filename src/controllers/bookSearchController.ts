@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import { searchBooks } from '../services/elasticsearchService';
+import { searchBooks } from '@/services/elasticsearchService';
 
 export const searchBooksController = async (
   req: Request,

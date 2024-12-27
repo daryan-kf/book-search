@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { ScanCommand } from '@aws-sdk/lib-dynamodb';
 
-import { dynamoDB } from '../config/awsConfig';
+import { dynamoDB } from '@/config/awsConfig';
 
 export const getBooks = async (req: Request, res: Response) => {
   try {

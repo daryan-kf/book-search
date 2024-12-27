@@ -3,7 +3,7 @@ import path from 'path';
 import fs from 'fs/promises';
 
 import { isValid, parseISO } from 'date-fns';
-import { Book } from '../types';
+import { Book } from '@/types';
 
 import 'dotenv/config';
 

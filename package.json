@@ -1,12 +1,12 @@
 {
   "name": "book-search",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/server.ts",
   "scripts": {
-    "start": "node dist/server.js",
+    "start": "npx ts-node src/app.ts",
+    "dev": "nodemon --watch src --exec ts-node -r tsconfig-paths/register src/server.ts",
     "start:vercel": "vercel dev",
     "build": "tsc",
-    "dev": "nodemon src/server.ts",
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint .",
@@ -30,6 +30,7 @@
     "prettier": "^3.4.1",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.7.2",
     "typescript-eslint": "^8.16.0"
   },
