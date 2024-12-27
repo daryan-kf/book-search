@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "src/server.ts",
   "scripts": {
-    "start": "npx ts-node src/app.ts",
+    "start": "npx ts-node src/server.ts",
     "dev": "nodemon --watch src --exec ts-node -r tsconfig-paths/register src/server.ts",
     "start:vercel": "vercel dev",
     "build": "tsc",
