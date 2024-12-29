@@ -4,7 +4,7 @@ import { PutCommand } from '@aws-sdk/lib-dynamodb';
 
 import { Book } from '@/types/index';
 
-import { dynamoDB } from '../config/awsConfig';
+import { dynamoDB } from '@/config/awsConfig';
 
 const booksData: Book[] = JSON.parse(
   fs.readFileSync(path.join(__dirname, '../data/books.json'), 'utf8')
